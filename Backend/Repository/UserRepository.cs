@@ -59,5 +59,11 @@ namespace Backend.Repository
             return userId;
         }
 
+        public async Task<bool> UserExists(int id)
+        {
+            var userModel= await _context.Users.FindAsync(id);
+            if(userModel is null) return false;
+            return true;
+        }
     }
 }
