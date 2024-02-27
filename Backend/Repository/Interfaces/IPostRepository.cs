@@ -10,7 +10,7 @@ namespace Backend.Repository.Interfaces
     {
         Task<List<Post>> GetAllAsync();
         Task<Post> GetByIdAsync(int id);
-        Task<Post> CreateAsync(Post post,int userId);
+        Task<Post> CreateAsync(Post post);
         Task<Post> UpdateAsync(Post psot,int id);
         Task<Post> RemoveAsync(int id);
     }
