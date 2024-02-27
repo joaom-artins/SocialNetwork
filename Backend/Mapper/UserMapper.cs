@@ -20,5 +20,16 @@ namespace Backend.Mapper
                 Comments=user.Comments
             };
         }
+        public static User ToCreatedFromUser(this CreatedUserDto createdUserDto)
+        {
+            return new User
+            {
+                Username=createdUserDto.Username,
+                Password=createdUserDto.Password,
+                Born=createdUserDto.Born,
+                Posts=[],
+                Comments=[]
+            };
+        }
     }
 }
